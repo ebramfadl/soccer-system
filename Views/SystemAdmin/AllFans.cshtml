@@ -1,0 +1,51 @@
+﻿@model List<SoccerWebsite.Models.Fan>
+
+@{
+    ViewBag.Title = "AllFans";
+}
+
+<h1>All Fans</h1>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Username</th>
+            <th scope="col">National ID</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Address</th>
+            <th scope="col">Birth Date</th>
+            <th scope="col">Status</th>
+            <th scope="col">Block Fan</th>
+            <th scope="col">Unblock Fan</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SoccerWebsite.Models.Fan fan in Model)
+        {
+            <tr>
+                <td>@fan.name</td>
+                <td>@fan.username</td>
+                <td>@fan.nationalId</td>
+                <td>@fan.phoneNumber</td>
+                <td>@fan.address</td>
+                <td>@fan.birthDate</td>
+                <td>@fan.status</td>
+
+                <td>
+                    <button class="btn btn-danger">@Html.ActionLink("Block", "BlockFan")</button>
+                </td>
+
+                <td>
+                    <button class="btn btn-success">@Html.ActionLink("Unblock", "UnblockFan")</button>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

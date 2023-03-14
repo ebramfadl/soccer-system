@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "BlockFan";
+}
+
+<h1>BlockFan</h1>
+
+<hr />
+
+@using (Html.BeginForm("BlockFan", "SystemAdmin", FormMethod.Post))
+{
+    <form>
+        <div class="mb-3">
+            <label for="idInput" class="form-label">National ID Number</label>
+            <input type="text" class="form-control" id="idInput" name="nationalId" required>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br />
+    </form>
+}
+

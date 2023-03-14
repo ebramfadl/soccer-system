@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "SendRequest";
+}
+
+<h1>Send Host Request</h1>
+
+<hr />
+
+@using (Html.BeginForm("SendRequest", "ClubRep", FormMethod.Post))
+{
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputUsername" class="form-label">Stadium Name</label>
+            <input type="text" class="form-control" id="exampleInputUsername" name="stadName" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="exampleInputPassword" class="form-label">Start Time</label>
+            <input type="text" placeholder="MM/DD/YYYY" class="form-control" id="exampleInputPassword" name="date" required>
+        </div>
+        <br />
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br />
+    </form>
+}

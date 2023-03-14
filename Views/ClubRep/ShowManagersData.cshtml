@@ -1,0 +1,32 @@
+﻿@model List<SoccerWebsite.Models.StadiumManager>
+
+
+@{
+    ViewBag.Title = "ShowManagersData";
+}
+
+<h1>Show Managers Data</h1>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Manager Name</th>
+            <th scope="col">Stadium Name</th>
+            <th scope="col">Location</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SoccerWebsite.Models.StadiumManager man in Model)
+        {
+            <tr>
+                <td>@man.name</td>
+                <td>@man.stadName</td>
+                <td>@man.location</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

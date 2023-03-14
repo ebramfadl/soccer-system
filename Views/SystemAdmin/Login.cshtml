@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h1>Login As System Admin</h1>
+
+<hr />
+
+@using (Html.BeginForm("Login", "SystemAdmin", FormMethod.Post))
+{
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleInputUsername" name="username" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="exampleInputPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword" name="password" required>
+        </div>
+        <br />
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br />
+    </form>
+}

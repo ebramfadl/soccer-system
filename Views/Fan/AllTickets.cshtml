@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "AllTickets";
+}
+
+<h1>All Tickets</h1>
+
+@model List<SoccerWebsite.Models.Ticket>
+
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th scope="col">Fan Name</th>
+            <th scope="col">Host Club Name</th>
+            <th scope="col">Guest Club Name</th>
+            <th scope="col">Start Time</th>
+            <th scope="col">Stadium Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SoccerWebsite.Models.Ticket ticket in Model)
+        {
+            <tr>
+                <td>@ticket.fanName</td>
+                <td>@ticket.hostName</td>
+                <td>@ticket.guestName</td>
+                <td>@ticket.starts</td>
+                <td>@ticket.stadName</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

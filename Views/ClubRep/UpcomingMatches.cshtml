@@ -1,0 +1,43 @@
+﻿@model List<SoccerWebsite.Models.Match>
+
+
+@{
+    ViewBag.Title = "AllMatches";
+}
+
+<h1>Upcoming Matches of the Club </h1>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Host Club Name</th>
+            <th scope="col">Guest Club Name</th>
+            <th scope="col">Stadium Name</th>
+            <th scope="col">Start Time</th>
+            <th scope="col">End Time</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var match in Model)
+        {
+            <tr>
+                <td>@match.hostName</td>
+                <td>@match.guestName</td>
+                @if (match.stadiumName == null)
+                {
+                    <td>  Undetermined </td>
+                }
+                else
+                {
+                    <td>  @match.stadiumName </td>
+                }
+                <td>@match.starts</td>
+                <td>@match.ends</td>
+            </tr>
+        }
+    </tbody>
+</table>

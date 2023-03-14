@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "InputDate";
+}
+
+<h1>Select Date</h1>
+
+<hr />
+
+@using (Html.BeginForm("AvailableMatches", "Fan", FormMethod.Post))
+{
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputUsername" class="form-label">Date</label>
+            <input type="text" placeholder="MM/DD/YY" class="form-control" id="exampleInputUsername" name="date" required>
+        </div>
+        <br />
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br />
+    </form>
+}

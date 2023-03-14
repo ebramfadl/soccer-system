@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "DeleteStadium";
+}
+
+<h1>DeleteStadium</h1>
+
+<hr />
+
+@using (Html.BeginForm("DeleteStadium", "SystemAdmin", FormMethod.Post))
+{
+    <form>
+        <div class="mb-3">
+            <label for="nameInput" class="form-label">Name</label>
+            <input type="text" class="form-control" id="nameInput" name="name" required>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br />
+    </form>
+}
+
+

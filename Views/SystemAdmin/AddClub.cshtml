@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "AddClub";
+}
+
+<h1>Add Club</h1>
+<hr />
+
+
+@using (Html.BeginForm("AddClub", "SystemAdmin", FormMethod.Post))
+{
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputUsername" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputUsername" name="name" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="exampleInputPassword" class="form-label">Location</label>
+            <input type="text" class="form-control" id="exampleInputPassword" name="location" required>
+        </div>
+        <br />
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br />
+    </form>
+}

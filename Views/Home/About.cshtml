@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+
+<h1>Guide for the system</h1>
+<hr />
+<br />
+
+<h2>System Admin</h2>
+<br />
+
+<p>
+    The system admin is the one who can add or delete clubs, add or delete stadiums, add or delete and
+    temporarily block fans from using the system.
+</p>
+
+<br />
+
+<h2>Sports Association Manager</h2>
+<br />
+
+<p>
+    First of all, the association manager (which has an ID and name) can manage (create, edit or delete) the
+    matches that will be played by the different clubs
+</p>
+
+<br />
+
+<h2>Matches</h2>
+<br />
+
+<p>
+    Matches will be played by exactly two Clubs. One of them is considered the host of the match. Each
+    game has an ID, starting time,
+</p>
+
+
+
+<br />
+
+<h2>Clubs</h2>
+<br />
+
+<p>
+    Each club (which has an ID, name and location) can play many matches through the season. The club
+    will also have a representative (with a name and ID). who will be responsible for asking for the permission
+    to host the matches played by the club he is representing when the club is the host of that match.
+</p>
+
+
+
+
+
+<br />
+
+<h2>Stadiums</h2>
+<br />
+
+<p>
+    Stadiums (which have an ID, name, capacity, location and status) are there to host the games. The status
+    of the stadium can be either available or not available. Each stadium has a manager (who has a name and
+    ID) who is in charge for approving or disapproving the different club requests for hosting their matches
+    on the stadium he is managing .
+</p>
+
+
+
+
+
+
+<br />
+
+<h2>Tickets</h2>
+<br />
+
+<p>
+    Once the stadium manager approves hosting a certain game, tickets will be available for the fans to buy
+    and attend the game. Each ticket has an ID, a stadium where the match is hosted on and a status that
+    can either be sold or available. The system keeps track about which users bought which tickets.
+</p>
+
+
+
+
+
+
+
+
+<br />
+
+<h2>Fans</h2>
+<br />
+
+<p>
+    Fans (who have name, national ID number, birth date, address and phone number) can buy tickets to
+    attend the matches. For some cases, a fan can temporarily be blocked from using the system.
+</p>
+
+

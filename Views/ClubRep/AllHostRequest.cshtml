@@ -1,0 +1,40 @@
+﻿@model List<SoccerWebsite.Models.HostRequest>
+
+
+@{
+    ViewBag.Title = "All Requests";
+}
+
+<h1>All Host Requests</h1>
+
+<hr />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Sender Name</th>
+            <th scope="col">Host Club Name</th>
+            <th scope="col">Guest Club Name</th>
+            <th scope="col">Start Time</th>
+            <th scope="col">End Time</th>
+            <th scope="col">Status</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SoccerWebsite.Models.HostRequest hostRequest in Model)
+        {
+            <tr>
+                <td>@hostRequest.senderName</td>
+                <td>@hostRequest.hostName</td>
+                <td>@hostRequest.guestName</td>
+                <td>@hostRequest.starts</td>
+                <td>@hostRequest.ends</td>
+                <td>@hostRequest.status</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

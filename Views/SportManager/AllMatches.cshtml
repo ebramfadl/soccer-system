@@ -1,0 +1,42 @@
+﻿@model List<SoccerWebsite.Models.Match>
+
+
+@{
+    ViewBag.Title = "AllMatches";
+}
+
+<h1>Matches</h1>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Host Club Name</th>
+            <th scope="col">Guest Club Name</th>
+            <th scope="col">Start Time</th>
+            <th scope="col">End Time</th>
+            <th scope="col">Stadium Name</th>
+            <th scope="col">Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var match in Model)
+        {
+            <tr>
+                <td>@match.hostName</td>
+                <td>@match.guestName</td>
+                <td>@match.starts</td>
+                <td>@match.ends</td>
+                <td>@match.stadiumName</td>
+                <td>@match.location</td>
+                <td>
+                    <button class="btn btn-danger">@Html.ActionLink("Delete", "DeleteMatch")</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

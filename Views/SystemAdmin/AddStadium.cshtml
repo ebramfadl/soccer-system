@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "AddStadium";
+}
+
+<h1>Add Stadium</h1>
+<hr />
+
+
+@using (Html.BeginForm("AddStadium", "SystemAdmin", FormMethod.Post))
+{
+    <form>
+        <div class="mb-3">
+            <label for="nameInput" class="form-label">Name</label>
+            <input type="text" class="form-control" id="nameInput" name="name" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="locationInput" class="form-label">Location</label>
+            <input type="text" class="form-control" id="locationInput" name="location" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="capacityInput" class="form-label">Capacity</label>
+            <input type="number" class="form-control" id="capacityInput" name="capacity" required>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br />
+    </form>
+}
+

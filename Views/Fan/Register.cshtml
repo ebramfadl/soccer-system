@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<h1>Fan Register</h1>
+<hr />
+
+
+@using (Html.BeginForm("Register", "Fan", FormMethod.Post))
+{
+    <form>
+        <div class="mb-3">
+            <label for="inputName" class="form-label">Fan Name</label>
+            <input type="text" class="form-control" id="inputName" name="fanName" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="inputName" class="form-label">National Id</label>
+            <input type="text" class="form-control" id="inputName" name="nationalId" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="inputUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="inputUsername" name="username" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword" name="password" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="inputPassword" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="inputPassword" name="phoneNumber" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="inputPassword" class="form-label">Birth Date</label>
+            <input type="text" placeholder="MM/DD/YYYY" class="form-control" id="inputPassword" name="birthdate" required>
+        </div>
+        <br />
+        <br />
+        <div class="mb-3">
+            <label for="inputPassword" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputPassword" name="address" required>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br />
+    </form>
+}

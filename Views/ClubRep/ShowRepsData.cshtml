@@ -1,0 +1,35 @@
+﻿@model List<SoccerWebsite.Models.ClubRep>
+
+@{
+    ViewBag.Title = "ShowRepsData";
+}
+
+<h1>Show Club Representatives Data</h1>
+
+<hr />
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Representative Name</th>
+            <th scope="col">Club Name</th>
+            <th scope="col">Location</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SoccerWebsite.Models.ClubRep rep in Model)
+        {
+            <tr>
+                <td>@rep.name</td>
+                <td>@rep.clubName</td>
+                <td>@rep.location</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

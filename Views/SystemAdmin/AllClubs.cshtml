@@ -1,0 +1,39 @@
+﻿@model List<SoccerWebsite.Models.Club>
+
+
+@{
+    ViewBag.Title = "All Clubs";
+}
+
+<h1>All Clubs</h1>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SoccerWebsite.Models.Club club in Model)
+        {
+            <tr>
+                <td>@club.name</td>
+                <td>@club.location</td>
+                <td>
+                    <button class="btn btn-danger">@Html.ActionLink("Delete", "DeleteClub")</button>
+                </td>
+
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

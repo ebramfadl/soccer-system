@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "AdminComponents";
+}
+
+<body style="font-size:20px">
+
+    <h1>Admin Components</h1>
+
+    <hr />
+
+    <h2>Choose what you want to do!</h2>
+
+    <br />
+
+    @Html.ActionLink("Add new club", "AddClub", "SystemAdmin")
+
+    <br />
+
+    @Html.ActionLink("Delete an existing club", "DeleteClub", "SystemAdmin")
+
+    <br />
+
+    @Html.ActionLink("Add new stadium", "AddStadium", "SystemAdmin")
+
+    <br />
+
+    @Html.ActionLink("Delete an existing stadium", "DeleteStadium", "SystemAdmin")
+
+    <br />
+
+    @Html.ActionLink("Block a fan", "BlockFan", "SystemAdmin")
+
+    <br />
+    @Html.ActionLink("Unblock a fan", "UnblockFan", "SystemAdmin")
+
+    <br />
+
+    @Html.ActionLink("Show all clubs", "AllClubs", "SystemAdmin")
+
+    <br />
+
+    @Html.ActionLink("Show all Stadiums", "AllStadiums", "SystemAdmin")
+
+    <br />
+
+    @Html.ActionLink("Show all Fans", "AllFans", "SystemAdmin")
+
+</body>
+
+
+
+

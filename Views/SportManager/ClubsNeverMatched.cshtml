@@ -1,0 +1,32 @@
+﻿@model List<SoccerWebsite.Models.Match>
+
+
+@{
+    ViewBag.Title = "ClubsNeverMatched";
+}
+
+<h1>Clubs Never Matched</h1>
+
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">First Club</th>
+            <th scope="col">Second Club</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var match in Model)
+        {
+            <tr>
+                <td>@match.hostName</td>
+                <td>@match.guestName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "DeleteMatch";
+}
+
+<h1>Delete Match</h1>
+<hr />
+
+@using (Html.BeginForm("DeleteMatch", "SportManager", FormMethod.Post))
+{
+    <form>
+        <div class="mb-3">
+            <label for="inputHostName" class="form-label">Host Club Name</label>
+            <input type="text" class="form-control" id="inputHostName" name="hostName" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="inputGuestName" class="form-label">Guest Club Name</label>
+            <input type="text" class="form-control" id="inputGuestName" name="guestName" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="inputStart" class="form-label">Start Time</label>
+            <input type="text" class="form-control" id="inputStart" placeholder="MM/DD/YYYY" name="startTime" required>
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="inputEnd" class="form-label">end Time</label>
+            <input type="text" class="form-control" id="inputEnd" placeholder="MM/DD/YYYY" name="endTime" required>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br />
+    </form>
+}
+
+

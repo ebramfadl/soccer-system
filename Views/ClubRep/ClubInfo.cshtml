@@ -1,0 +1,33 @@
+﻿@model List<SoccerWebsite.Models.Club>
+
+
+@{
+    ViewBag.Title = "ClubInfo";
+}
+
+<h1>Club Info</h1>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SoccerWebsite.Models.Club club in Model)
+        {
+            <tr>
+                <td>@club.name</td>
+                <td>@club.location</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
